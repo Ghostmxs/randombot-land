@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — Randomaxer</title>
+  <meta name="description" content="Политика конфиденциальности сервиса Randomaxer: что мы собираем, как храним и защищаем ваши данные.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://randomaxer.org/privacy.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232AABEE'/%3E%3Cstop offset='1' stop-color='%238B6FE8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M7 22 L11 10 L16 17 L21 10 L25 22' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="shared.css">
+
+  <style>
+    /* ─── LEGAL PAGE ────────────────────────────────────── */
+    .legal-hero {
+      padding: 140px 0 80px;
+      border-bottom: 1px solid var(--line);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--t2);
+      margin-bottom: 40px;
+      transition: color .18s;
+    }
+    .back-link:hover { color: var(--t1); }
+    .back-link svg { width: 16px; height: 16px; }
+    .legal-hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      letter-spacing: -1.8px;
+      line-height: 1.06;
+      margin-bottom: 16px;
+      color: var(--t1);
+    }
+    .legal-meta {
+      font-size: 14px;
+      color: var(--t3);
+    }
+    .legal-body-wrap {
+      padding: 80px 0 100px;
+    }
+    .legal-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    /* Table of contents */
+    .toc {
+      position: sticky;
+      top: 84px;
+    }
+    .toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--t3);
+      margin-bottom: 16px;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .toc-list a {
+      display: block;
+      padding: 7px 10px;
+      font-size: 13px;
+      color: var(--t2);
+      border-radius: 8px;
+      transition: background .15s, color .15s;
+      line-height: 1.4;
+    }
+    .toc-list a:hover {
+      background: rgba(255,255,255,.05);
+      color: var(--t1);
+    }
+    /* Document */
+    .doc {
+      max-width: 680px;
+      font-size: 15px;
+      color: var(--t2);
+      line-height: 1.85;
+    }
+    .doc-section { margin-bottom: 56px; scroll-margin-top: 96px; }
+    .doc-section:last-child { margin-bottom: 0; }
+    .doc h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--t1);
+      letter-spacing: -.4px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .doc-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(42,171,238,.12);
+      border: 1px solid rgba(42,171,238,.2);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+    .doc p { margin-bottom: 14px; }
+    .doc p:last-child { margin-bottom: 0; }
+    .doc ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .doc li {
+      padding-left: 20px;
+      position: relative;
+    }
+    .doc li::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--t3);
+    }
+    .doc a { color: var(--blue); transition: opacity .15s; }
+    .doc a:hover { opacity: .75; }
+    .doc strong { color: var(--t1); font-weight: 600; }
+    .doc .callout {
+      padding: 16px 20px;
+      background: rgba(42,171,238,.07);
+      border: 1px solid rgba(42,171,238,.14);
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .legal-grid { grid-template-columns: 1fr; gap: 40px; }
+      .toc { position: static; display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="hdr">
+  <div class="wrap">
+    <div class="hdr-inner">
+      <a href="/" class="logo" aria-label="Randomaxer — главная">
+        <span class="logo-mark">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1.5 11.5 L4.5 2.5 L7 7.5 L9.5 2.5 L12.5 11.5"
+                  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        Randomaxer
+      </a>
+      <a href="https://t.me/Randomaxerbot" class="btn btn-fill"
+         target="_blank" rel="noopener noreferrer" style="margin-left: auto;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+        </svg>
+        Открыть бота
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <div class="legal-hero">
+    <div class="wrap">
+      <a href="/" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+        Назад
+      </a>
+      <h1>Политика<br>конфиденциальности</h1>
+      <p class="legal-meta">Вступила в силу: 1 января 2025 &nbsp;·&nbsp; Последнее обновление: 5 марта 2025</p>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="legal-body-wrap">
+    <div class="wrap">
+      <div class="legal-grid">
+
+        <!-- Table of Contents -->
+        <aside class="toc" aria-label="Содержание">
+          <p class="toc-title">Содержание</p>
+          <ul class="toc-list">
+            <li><a href="#p1">Оператор данных</a></li>
+            <li><a href="#p2">Что мы собираем</a></li>
+            <li><a href="#p3">Цели обработки</a></li>
+            <li><a href="#p4">Правовые основания</a></li>
+            <li><a href="#p5">Срок хранения</a></li>
+            <li><a href="#p6">Передача третьим лицам</a></li>
+            <li><a href="#p7">Хранение данных</a></li>
+            <li><a href="#p8">Ваши права</a></li>
+            <li><a href="#p9">Безопасность</a></li>
+            <li><a href="#p10">Cookie</a></li>
+            <li><a href="#p11">Изменения</a></li>
+          </ul>
+        </aside>
+
+        <!-- Document -->
+        <article class="doc">
+          <p style="margin-bottom: 40px; font-size: 16px; line-height: 1.75;">
+            Настоящая Политика описывает, какие данные собирает сервис <strong>Randomaxer</strong>
+            (<a href="https://randomaxer.org">randomaxer.org</a>) и боты в Telegram и MAX,
+            как эти данные используются и как мы их защищаем.
+          </p>
+
+          <div class="doc-section" id="p1">
+            <h2><span class="doc-num">1</span>Оператор данных</h2>
+            <p>
+              <strong>Индивидуальный предприниматель Ханин Кирилл Русланович</strong><br>
+              ИНН 611904153140 &nbsp;·&nbsp; ОГРН 325619600062361<br>
+              Контакт: <a href="mailto:kirill@khanin.pro">kirill@khanin.pro</a>
+            </p>
+          </div>
+
+          <div class="doc-section" id="p2">
+            <h2><span class="doc-num">2</span>Что мы собираем</h2>
+            <p>При использовании Сервиса автоматически обрабатываются:</p>
+            <ul>
+              <li>идентификатор пользователя в Telegram и/или MAX (user_id);</li>
+              <li>публичное имя (first name, last name) в пределах мессенджера;</li>
+              <li>имя пользователя (username), если установлено;</li>
+              <li>идентификаторы каналов, добавленных пользователем в Сервис;</li>
+              <li>данные об участии в розыгрышах и созданных розыгрышах;</li>
+              <li>факт связки аккаунтов Telegram и MAX между собой.</li>
+            </ul>
+            <div class="callout">
+              Мы <strong>не собираем</strong> номера телефонов, email-адреса, платёжные реквизиты
+              и иные чувствительные данные — если только вы не передали их добровольно при обращении в поддержку.
+            </div>
+          </div>
+
+          <div class="doc-section" id="p3">
+            <h2><span class="doc-num">3</span>Цели обработки</h2>
+            <ul>
+              <li>предоставление функционала: создание розыгрышей, проверка условий, выбор победителей;</li>
+              <li>отправка уведомлений о ходе розыгрышей и победе;</li>
+              <li>связывание аккаунтов Telegram и MAX для кросс-платформенного участия;</li>
+              <li>обеспечение безопасности и работоспособности Сервиса;</li>
+              <li>соблюдение требований законодательства Российской Федерации.</li>
+            </ul>
+          </div>
+
+          <div class="doc-section" id="p4">
+            <h2><span class="doc-num">4</span>Правовые основания</h2>
+            <ul>
+              <li>исполнение Пользовательского соглашения, принятого при начале использования Сервиса;</li>
+              <li>законные интересы Оператора (безопасность и работоспособность);</li>
+              <li>требования законодательства РФ (Федеральный закон № 152-ФЗ «О персональных данных»).</li>
+            </ul>
+          </div>
+
+          <div class="doc-section" id="p5">
+            <h2><span class="doc-num">5</span>Срок хранения</h2>
+            <p>
+              Данные хранятся в течение всего срока использования Сервиса, а также в течение 3 лет
+              после последнего обращения — в целях соблюдения налогового и гражданского законодательства.
+            </p>
+            <p>
+              По вашему запросу данные удаляются досрочно, если это не противоречит закону.
+              Для запроса на удаление: <a href="mailto:kirill@khanin.pro">kirill@khanin.pro</a>.
+            </p>
+          </div>
+
+          <div class="doc-section" id="p6">
+            <h2><span class="doc-num">6</span>Передача третьим лицам</h2>
+            <p>Мы не продаём и не передаём персональные данные третьим лицам, за исключением:</p>
+            <ul>
+              <li>инфраструктуры платформ Telegram и MAX — в рамках их собственных политик конфиденциальности;</li>
+              <li>технических партнёров (хостинг, инфраструктура) — только в объёме, необходимом для работы Сервиса, на основании договоров об обработке данных;</li>
+              <li>государственных органов — по законному и обоснованному требованию.</li>
+            </ul>
+          </div>
+
+          <div class="doc-section" id="p7">
+            <h2><span class="doc-num">7</span>Хранение данных</h2>
+            <p>
+              Персональные данные хранятся на серверах, расположенных на территории
+              Российской Федерации, в соответствии с требованиями Федерального закона № 152-ФЗ.
+            </p>
+          </div>
+
+          <div class="doc-section" id="p8">
+            <h2><span class="doc-num">8</span>Ваши права</h2>
+            <p>В соответствии с Федеральным законом № 152-ФЗ вы вправе:</p>
+            <ul>
+              <li>запросить доступ к своим персональным данным;</li>
+              <li>потребовать исправления неточных или устаревших данных;</li>
+              <li>потребовать удаления данных («право на забвение»);</li>
+              <li>отозвать согласие на обработку в любой момент;</li>
+              <li>подать жалобу в Роскомнадзор.</li>
+            </ul>
+            <p>
+              Для реализации любого из этих прав напишите на
+              <a href="mailto:kirill@khanin.pro">kirill@khanin.pro</a>.
+              Срок ответа — до 30 дней.
+            </p>
+          </div>
+
+          <div class="doc-section" id="p9">
+            <h2><span class="doc-num">9</span>Безопасность</h2>
+            <p>
+              Мы применяем технические и организационные меры защиты данных:
+              шифрование при передаче (TLS), ограничение доступа на уровне инфраструктуры,
+              регулярный аудит безопасности.
+            </p>
+          </div>
+
+          <div class="doc-section" id="p10">
+            <h2><span class="doc-num">10</span>Файлы cookie</h2>
+            <p>
+              Сайт randomaxer.org использует только технические cookie,
+              необходимые для корректной работы. Аналитические и маркетинговые
+              cookie не используются.
+            </p>
+          </div>
+
+          <div class="doc-section" id="p11">
+            <h2><span class="doc-num">11</span>Изменения Политики</h2>
+            <p>
+              Мы вправе обновлять Политику. Актуальная версия всегда доступна
+              на этой странице. Дата последнего обновления указана в начале документа.
+              Продолжение использования Сервиса после обновления означает принятие новой редакции.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="logo">
+          <span class="logo-mark">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1.5 11.5 L4.5 2.5 L7 7.5 L9.5 2.5 L12.5 11.5"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Randomaxer
+        </a>
+        <p class="foot-tagline">
+          Платформа для честных кросс-платформенных розыгрышей в Telegram и MAX.
+        </p>
+      </div>
+      <div class="socials">
+        <a href="https://t.me/Randomaxerbot" class="social-btn"
+           target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="#2AABEE" aria-hidden="true">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+        </a>
+        <a href="https://max.ru" class="social-btn"
+           target="_blank" rel="noopener noreferrer" aria-label="MAX">
+          <svg viewBox="0 0 42 42" aria-hidden="true">
+            <path fill="#0077FF" fill-rule="evenodd" d="M21.47 41.88c-4.11 0-6.02-.6-9.34-3-2.1 2.7-8.75 4.81-9.04 1.2 0-2.71-.6-5-1.28-7.5C1 29.5.08 26.07.08 21.1.08 9.23 9.82.3 21.36.3c11.55 0 20.6 9.37 20.6 20.91a20.6 20.6 0 0 1-20.49 20.67Zm.17-31.32c-5.62-.29-10 3.6-10.97 9.7-.8 5.05.62 11.2 1.83 11.52.58.14 2.04-1.04 2.95-1.95a10.4 10.4 0 0 0 5.08 1.81 10.7 10.7 0 0 0 11.19-9.97 10.7 10.7 0 0 0-10.08-11.1Z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-legal">
+        <div>ИП Ханин К. Р. &nbsp;·&nbsp; ИНН 611904153140 &nbsp;·&nbsp; ОГРН 325619600062361</div>
+        <div>
+          <a href="mailto:kirill@khanin.pro">kirill@khanin.pro</a>
+          &nbsp;·&nbsp; © 2025 Randomaxer. Все права защищены.
+        </div>
+      </div>
+      <nav class="foot-links">
+        <a href="/privacy.html">Политика конфиденциальности</a>
+        <a href="/terms.html">Пользовательское соглашение</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', () => {
+    hdr.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+  hdr.classList.add('scrolled'); // на подстраницах header всегда залит
+</script>
+</body>
+</html>
