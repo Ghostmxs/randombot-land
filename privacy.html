@@ -193,7 +193,7 @@
         Назад
       </a>
       <h1>Политика<br>конфиденциальности</h1>
-      <p class="legal-meta">Вступила в силу: 1 января 2025 &nbsp;·&nbsp; Последнее обновление: 5 марта 2025</p>
+      <p class="legal-meta">Вступила в силу: 1 марта 2026 &nbsp;·&nbsp; Последнее обновление: 5 марта 2026</p>
     </div>
   </div>
 
@@ -392,7 +392,7 @@
         <div>ИП Ханин К. Р. &nbsp;·&nbsp; ИНН 611904153140 &nbsp;·&nbsp; ОГРН 325619600062361</div>
         <div>
           <a href="mailto:kirill@khanin.pro">kirill@khanin.pro</a>
-          &nbsp;·&nbsp; © 2025 Randomaxer. Все права защищены.
+          &nbsp;·&nbsp; © <span id="yr"></span> Randomaxer. Все права защищены.
         </div>
       </div>
       <nav class="foot-links">
@@ -408,7 +408,8 @@
   window.addEventListener('scroll', () => {
     hdr.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
-  hdr.classList.add('scrolled'); // на подстраницах header всегда залит
+  hdr.classList.add('scrolled');
+  document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

@@ -757,7 +757,7 @@
         <div>ИП Ханин К. Р. &nbsp;·&nbsp; ИНН 611904153140 &nbsp;·&nbsp; ОГРН 325619600062361</div>
         <div>
           <a href="mailto:kirill@khanin.pro">kirill@khanin.pro</a>
-          &nbsp;·&nbsp; © 2025 Randomaxer. Все права защищены.
+          &nbsp;·&nbsp; © <span id="yr"></span> Randomaxer. Все права защищены.
         </div>
       </div>
       <nav class="foot-links" aria-label="Правовые документы">
@@ -796,6 +796,7 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.up').forEach(el => io.observe(el));
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
   // Hero items — показываем сразу без задержки на скролл
   document.querySelectorAll('#hero .up')
